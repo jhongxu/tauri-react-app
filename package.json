@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "format": "biome format --write .",
-    "check":"biome check --apply .",
-    "lint":"biome lint --apply ."
+    "check":"biome check --apply ./src",
+    "lint":"biome lint --apply ./src"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.1",

@@ -7,12 +7,11 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true
-		}
+		},
+		"ignore": ["./src-tauri"]
 	},
 	"formatter": {
-		"ignore": [
-			"./src-tauri"
-		]
+		"ignore": ["./src-tauri"]
 	},
 	"javascript": {
 		"formatter": {
