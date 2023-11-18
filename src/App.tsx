@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { invoke } from '@tauri-apps/api/tauri';
-import './App.scss';
 import { Button } from 'antd';
+import { useState } from 'react';
+import './App.scss';
 
 function App() {
 	const [greetMsg, setGreetMsg] = useState('');
