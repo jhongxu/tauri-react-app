@@ -4,39 +4,47 @@ import { Button, Result, Typography } from 'antd';
 
 const { Paragraph, Text } = Typography;
 
-const App: React.FC = () => (
-	<Result
-		status="error"
-		title="Submission Failed"
-		subTitle="Please check and modify the following information before resubmitting."
-		extra={[
-			<Button type="primary" key="console">
-				Go Console
-			</Button>,
-			<Button key="buy">Buy Again</Button>,
-		]}
-	>
-		<div className="desc">
-			<Paragraph>
-				<Text
-					strong
-					style={{
-						fontSize: 16,
-					}}
-				>
-					The content you submitted has the following error:
-				</Text>
-			</Paragraph>
-			<Paragraph>
-				<CloseCircleOutlined className="site-result-demo-error-icon" /> Your
-				account has been frozen.
-			</Paragraph>
-			<Paragraph>
-				<CloseCircleOutlined className="site-result-demo-error-icon" /> Your
-				account is not yet eligible to apply.
-			</Paragraph>
-		</div>
-	</Result>
-);
+const App: React.FC = () => {
+	const handleGoBack = () => {
+		// naviagate
+	};
+	return (
+		<Result
+			status="error"
+			title="Submission Failed"
+			subTitle="Please check and modify the following information before resubmitting."
+			extra={[
+				<Button type="primary" onClick={handleGoBack}>
+					Go Back
+				</Button>,
+				<Button type="primary" key="console">
+					Go Console
+				</Button>,
+				<Button key="buy">Buy Again</Button>,
+			]}
+		>
+			<div className="desc">
+				<Paragraph>
+					<Text
+						strong
+						style={{
+							fontSize: 16,
+						}}
+					>
+						The content you submitted has the following error:
+					</Text>
+				</Paragraph>
+				<Paragraph>
+					<CloseCircleOutlined className="site-result-demo-error-icon" /> Your
+					account has been frozen.
+				</Paragraph>
+				<Paragraph>
+					<CloseCircleOutlined className="site-result-demo-error-icon" /> Your
+					account is not yet eligible to apply.
+				</Paragraph>
+			</div>
+		</Result>
+	);
+};
 
 export default App;
